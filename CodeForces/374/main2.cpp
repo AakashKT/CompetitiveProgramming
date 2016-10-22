@@ -14,13 +14,23 @@ using namespace std;
 
 int main()
 {
+<<<<<<< HEAD
 	int arr[100] = {0}, n, k;
 	string p;
+=======
+	int arr[120];
+	int n, k, total=0, total2=0;
+	string temp;
+
+	for(int i=0;i<120;i++)
+		arr[i] = 0;
+>>>>>>> dcaf9af7045483537da53b7790c90e98dc75d927
 
 	cin >> n >> k;
 
 	for(int i=0;i<n;i++)
 	{
+<<<<<<< HEAD
 		string s;
 		cin >> s;
 
@@ -50,6 +60,25 @@ int main()
 	int best = t+5*(t/k) + 1;
 
 	cout << t+1 << " " << worst << endl;
+=======
+		cin >> temp;
+		arr[temp.length()]++;
+	}
+
+	cin >> temp;
+
+	for(int i=1;i<temp.length();i++)
+		total += arr[i];
+
+	for(int i=1;i<=temp.length();i++)
+		total2 += arr[i];
+	total2 -= 1;
+
+	total += (total/k)*5 + 1;
+	total2 += (total2/k)*5 + 1;
+
+	cout << total << " " << total2 << endl;
+>>>>>>> dcaf9af7045483537da53b7790c90e98dc75d927
 }
 
 		
